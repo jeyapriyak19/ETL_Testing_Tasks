@@ -48,9 +48,21 @@ Which SQL Constraint should be used to restrict invalid account types from being
 
 CREATE TABLE Bank_Account (
     Account_ID INT PRIMARY KEY,
-    Customer_Name VARCHAR(30),
+    Customer_Name VARCHAR(30), 
     Account_Type VARCHAR(15),
     Balance DECIMAL(10,2),
     CHECK (Account_Type IN ('Savings', 'Current'))
 );
 
+/* 5. Scenario 
+Whenever a new asset is added to the system, if the user does not specify the Status, it should automatically be stored as 'Active'.
+Interview Question
+Which SQL Constraint can automatically assign a value when no value is provided during insertion?*/
+
+CREATE TABLE Assets (
+    Asset_ID INT PRIMARY KEY,
+    Asset_Name VARCHAR(50),
+    Status VARCHAR(20) DEFAULT "Active",
+    Purchase_Date Date
+);
+commit
