@@ -1,7 +1,6 @@
 -- Create Employee Database 
-create database Employee_DB;
 use Employee_DB;
-
+create database Employee_DB;
 -- Create Employee table
 create table Employee(Emp_ID int primary key, Emp_Name varchar(20) NOT NULL, Department varchar(10), Salary decimal(7,2), City varchar(15));
 -- Insert values into Employee table
