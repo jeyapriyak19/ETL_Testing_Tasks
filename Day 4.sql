@@ -63,3 +63,11 @@ Generate a report that displays:
 • Performance Status based on a condition
 The report should classify students according to the business rule provided by the trainer.
 Write a SQL query to generate the report.*/
+
+SELECT STD_NAME, Marks,
+CASE
+WHEN Marks >= 90 THEN 'Excellent'
+WHEN Marks >= 75 THEN 'Good'
+WHEN Marks >= 50 THEN 'Pass'
+ELSE 'Fail' END AS Performance_Status
+FROM Student1;
