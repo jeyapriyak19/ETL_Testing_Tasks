@@ -77,4 +77,4 @@ LEFT JOIN Employee6 M
 ON E.MANAGER_ID=M.EMP_ID
 order by E.EMP_NAME;
 
-select * from empoyee6;
+select * from employee6;
